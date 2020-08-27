@@ -1,5 +1,5 @@
 ﻿namespace ClothingAccounting.DataBase.Model.sqlPeople {
-    class Users {
+    public class Users {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }

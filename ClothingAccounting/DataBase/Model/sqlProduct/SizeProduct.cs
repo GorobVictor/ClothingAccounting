@@ -1,13 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Windows.Documents;
 
 namespace ClothingAccounting.DataBase.Model.sqlProduct {
-    class SizeProduct {
+    public class SizeProduct {
         public int Id { get; set; }
         public int IdProduct { get; set; }
         [ForeignKey("IdProduct")]
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
         public int IdSize { get; set; }
-        [ForeignKey("IdColor")]
-        public Size Size { get; set; }
+        [ForeignKey("IdSize")]
+        public virtual Size Size { get; set; }
+        public virtual List<ProductPrice> ProductPrice { get; set; }
     }
 }

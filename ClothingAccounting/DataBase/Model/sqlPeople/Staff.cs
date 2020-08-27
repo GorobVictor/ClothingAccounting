@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClothingAccounting.DataBase.Model.sqlPeople {
-    class Staff {
+    public class Staff {
         public int Id { get; set; }
         public string Name { get; set; }
         public int IdPost { get; set; }
         [ForeignKey("IdPost")]
-        public Post Post { get; set; }
+        public virtual Post Post { get; set; }
     }
 }

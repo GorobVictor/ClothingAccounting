@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListView x:Name="listView_Balance" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <!--<GridViewColumn Header="IdProduct" Width="30" DisplayMemberBinding="{Binding IdProduct}" />
+                    <GridViewColumn Header="IdSizeProduct" Width="120" DisplayMemberBinding="{Binding IdSizeProduct}" />
+                    <GridViewColumn Header="IdColorProduct" Width="120" DisplayMemberBinding="{Binding IdColorProduct}" />
+                    <GridViewColumn Header="IdStaff" Width="120" DisplayMemberBinding="{Binding IdStaff}" />
+                    <GridViewColumn Header="Quantity" Width="120" DisplayMemberBinding="{Binding Quantity}" />-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <DataGrid x:Name="datagrid_Balance" Margin="20"/>
+
     </Grid>
 </Window>

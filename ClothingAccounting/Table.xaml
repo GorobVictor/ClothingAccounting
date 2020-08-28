@@ -1,0 +1,22 @@
+﻿<Window x:Class="ClothingAccounting.Table"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClothingAccounting"
+        mc:Ignorable="d"
+        Title="Table" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="140"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btn_DownloadBalance" Content="Скачать таблицу" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="101" Grid.Column="1" Click="btn_DownloadBalance_Click"/>
+        <DataGrid x:Name="datagrid_Table" Margin="10,10,5,10"/>
+        <RadioButton x:Name="rad_MovementOfGoods" GroupName="table" Content="Движение товаров" HorizontalAlignment="Left" Margin="5,35,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="rad_MovementOfGoods_Checked" IsChecked="True"/>
+        <RadioButton x:Name="rad_staff" GroupName="table" Content="Сотрудники" HorizontalAlignment="Left" Margin="5,55,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="rad_staff_Checked"/>
+        <RadioButton x:Name="rad_Users" GroupName="table" Content="Клиенты" HorizontalAlignment="Left" Margin="5,75,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="rad_Users_Checked"/>
+
+    </Grid>
+</Window>

@@ -9,5 +9,15 @@ namespace ClothingAccounting.DataBase.Model.sqlProduct {
         public virtual List<ColorProduct> ColorProduct { get; set; }
         public virtual List<SizeProduct> SizeProduct { get; set; }
         public virtual List<ProductPhoto> ProductPhoto { get; set; }
+        public virtual List<DeliveryProduct> DeliveryProduct { get; set; }
+        public string GetDelivery() {
+            string result = "";
+            foreach (var delivery in DeliveryProduct)
+                if (result == "")
+                    result = delivery.Delivery.Name;
+                else
+                    result += $", {delivery.Delivery.Name}";
+            return result;
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using ClothingAccounting.DataBase.Model.sqlPeople;
 using ClothingAccounting.DataBase.Model.sqlProduct;
 
@@ -21,5 +23,6 @@ namespace ClothingAccounting.DataBase.Model.sqlOrders {
         [ForeignKey("IdStaff")]
         public virtual Staff Staff { get; set; }
         public int Quantity { get; set; }
+        public DateTime Date { get; set; }
     }
 }

@@ -5,6 +5,7 @@ namespace ClothingAccounting.DataBase.Model.sqlPeople {
         public int Id { get; set; }
         public string Name { get; set; }
         public int IdPost { get; set; }
+        public string getPost { get => Post.Name; }
         [ForeignKey("IdPost")]
         public virtual Post Post { get; set; }
     }

@@ -22,9 +22,6 @@ namespace ClothingAccounting {
             InitializeComponent();
             datagrid_Table.ItemsSource = MainWindow._connectedBase.GetMovementOfGoods();
         }
-        public void getTable(string value) {
-
-        }
 
         private void btn_DownloadBalance_Click(object sender, RoutedEventArgs e) {
             var table = datagrid_Table.Items;
